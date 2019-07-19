@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_image"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp">
+
+        <ImageView
+            android:id="@+id/image_view_movie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#80000000"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/text_view_movie_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SpiderMan: Far from Home"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:textSize="24sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/text_view_release_date"
+                android:layout_below="@+id/text_view_movie_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2019"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_layout_image"
+        android:layout_margin="30dp">
+
+        <TextView
+            android:id="@+id/text_view_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/overview"
+            android:textSize="24sp"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:id="@+id/text_view_movie_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_overview"
+            android:padding="5dp"
+            android:lineHeight="20dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
